@@ -5,13 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selection Part two</title>
     <style>
-
+        *{
+            border: solid 2px #ccc;
+            margin: 15px;
+            padding: 15px;
+        }
+        html{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-width: 600px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 30px auto;
+            color: #333;
+        }
     </style>
 </head>
 <body>
+
+    <h1 id="judul">Ini adalah judul</h1>
+    <div class="container">
+        <section id="A">
+            <p class="P1">Paragraf 1</p>
+            <a href="#">Link disini</a>
+            <p class="P2">Paragraf 2</p>
+            <p class="P3">Paragraf 3</p>
+        </section>
+        <section id="B">
+            <p class="P4">Paragraf 4</p>
+            <ul>
+                <li>list 1</li>
+                <li>list 2</li>
+                <li>list 3</li>
+                <li>list 4</li>
+                <li>list 5</li>
+            </ul>
+        </section>
+    </div>
     
     <script>
-        
+        // document.querySelector() -> menghasilkan satu element
+        const p4 = document.querySelector('#B p');
+
+        p4.style.fontSize ='40px'
+        p4.addEventListener("click", function(){
+            p4.style.color = 'green';
+        })
+
+        const li2 = document.querySelector('Section#B ul li:nth-child(2)');
+        li2.style.backgroundColor = 'orange';
+
+        const p = document.querySelector('p');
+        p.innerHTML = 'ini diubah pake javascript'
+
+
+        //document.querySelectorAll() -> menghasilkan atau mengambil semua yang ada di html
+        const b = document.querySelectorAll('p');
+
+        for(let i = 0; i < b.length; i++){
+            b[i].style.backgroundColor = 'lightblue';
+        }
+
     </script>
 </body>
 </html>
